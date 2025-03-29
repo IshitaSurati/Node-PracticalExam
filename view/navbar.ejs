@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="/css/style.css">
+    <nav>
+        <a href="/">Home</a>
+        <a href="/blogs/my-articles">My Articles</a>
+        <a href="/blogs/new">New Article</a>
+        <% if (!user) { %>
+            <a href="/auth/login">Login</a>
+            <a href="/auth/register">Register</a>
+            <% } else { %>
+                <a href="/auth/logout">Logout</a>
+                <% } %>
+    </nav>
+</body>
+
+</html>

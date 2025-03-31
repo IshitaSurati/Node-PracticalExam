@@ -1,0 +1,7 @@
+<%- include('navbar') %>
+<h1><%= article ? 'Edit' : 'New' %> Article</h1>
+<form action="<%= article ? `/blogs/${article._id}?_method=PUT` : '/blogs' %>" method="POST">
+  <input type="text" name="title" placeholder="Title" value="<%= article ? article.title : '' %>" required>
+  <textarea name="content" placeholder="Content" required><%= article ? article.content : '' %></textarea>
+  <button type="submit">Submit</button>
+</form>

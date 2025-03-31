@@ -1,0 +1,13 @@
+<%- include('navbar') %>
+<h1>My Articles</h1>
+<ul>
+  <% articles.forEach(article => { %>
+    <li>
+      <a href="/blogs/<%= article._id %>"><%= article.title %></a>
+      <a href="/blogs/<%= article._id %>/edit">Edit</a>
+      <form action="/blogs/<%= article._id %>?_method=DELETE" method="POST" style="display:inline;">
+        <button type="submit">Delete</button>
+      </form>
+    </li>
+  <% }) %>
+</ul>

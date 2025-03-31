@@ -1,0 +1,12 @@
+<h1>All Articles</h1>
+<ul>
+  <% if (articles.length === 0) { %>
+    <p>No articles available. Be the first to post one!</p>
+  <% } else { %>
+    <% articles.forEach(article => { %>
+      <li>
+        <a href="/blogs/<%= article._id %>"><%= article.title %></a>
+      </li>
+    <% }) %>
+  <% } %>
+</ul>
